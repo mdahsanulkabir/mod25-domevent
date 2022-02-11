@@ -4,9 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Events</title>
 </head>
 <body>
-    
+    <h1 onclick="console.log('H1 is clicked')">Event Discussion</h1>
+    <button onclick='document.body.style.backgroundColor="yellow"'>Click Me: Yellow</button>
+    <button onclick=makeRed()>Click me : Red</button>
+    <button id="make-blue-button">Click me: Blue</button>
+    <button id="make-green-button">Click me: Green</button>
+    <button id="make-goldenrod">Click me: Golden Rod</button>
+    <button id="make-hotpink">Click me: Hot Pink</button>
+    <button id="make-lightblue">Click me: Light Blue</button>
+    <script src="js/events.js"></script>
+    <script>
+        document.getElementById('make-lightblue').addEventListener('click',function (){
+        document.body.style.backgroundColor = 'lightblue';
+        });
+    </script>
+   
 </body>
 </html>
