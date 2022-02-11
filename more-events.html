@@ -19,20 +19,23 @@
             document.getElementById('secret-info').style.display = 'none';
         });
 
-        //focus
-        document.getElementById('delete-confirm').addEventListener('focus', function(){
-            document.body.style.backgroundColor = 'lightcoral';
-        });
-        //focus out
-        document.getElementById('delete-confirm').addEventListener('blur', function(){
-            document.body.style.backgroundColor = 'white';
-        });
+        // //focus
+        // document.getElementById('delete-confirm').addEventListener('focus', function(){
+        //     document.body.style.backgroundColor = 'lightcoral';
+        // });
+        // //focus out
+        // document.getElementById('delete-confirm').addEventListener('blur', function(){
+        //     document.body.style.backgroundColor = 'white';
+        // });
         //key down
         document.getElementById('delete-confirm').addEventListener('keyup', function(event){
-            const deleteField = document.getElementById('delete-confirm');
+            const deleteField = document.getElementById('delete-btn');
             if(event.target.value == 'delete'){
-                document.getElementById('delete-btn').removeAttribute('disabled');
-            };
+                deleteField.removeAttribute('disabled');
+            }
+            else{
+                deleteField.setAttribute('disabled', true)
+            }
         });
         //keypress
         // document.getElementById('delete-confirm').addEventListener('keyup', function(){
