@@ -7,6 +7,31 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h4>Add your Comment</h4>
+    <div id="comment-container">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quia unde quasi officiis odio eius quisquam dolorum saepe temporibus vitae sequi expedita ipsam amet doloremque, reiciendis animi recusandae impedit dolore?</p>
+        <p>Maiores odit quas unde sequi blanditiis nam cumque illum doloremque quaerat saepe eligendi itaque sed, quasi necessitatibus molestiae obcaecati sapiente et consequuntur similique quam rerum quo illo! In, dolore repellat.</p>
+    </div>
+    <div>
+        <textarea name="" id="new-comment" cols="60" rows="4"></textarea>
+        <button id="submit-comment">Post</button>
+    </div>
+
+    <script>
+        document.getElementById('submit-comment').addEventListener('click', function(){
+            // 
+            //get user comment
+            const comment = document.getElementById('new-comment').value;
+
+            //create comment paragraph
+            const p = document.createElement('p');
+            p.innerText = comment;
+
+            //append the comment
+            const newComment = document.getElementById('comment-container');
+            newComment.appendChild(p);
+            document.getElementById('new-comment').value = '';
+        })
+    </script>
 </body>
 </html>
